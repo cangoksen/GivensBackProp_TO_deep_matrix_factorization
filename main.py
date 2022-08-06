@@ -9,7 +9,7 @@ from lunzi.typing import *
 from opt import GroupRMSprop
 
 device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-
+torch.manual_seed(0)
 
 class FLAGS(lz.BaseFLAGS):
     problem = ''
@@ -19,7 +19,7 @@ class FLAGS(lz.BaseFLAGS):
     depth = 1
     n_train_samples = 0
     n_iters = 1000000
-    n_dev_iters = max(1, n_iters // 1000)
+    n_dev_iters = max(1, n_iters // 10000)
     init_scale = 0.001  # average magnitude of entries
     shape = [0, 0]
     n_singulars_save = 0
@@ -27,6 +27,7 @@ class FLAGS(lz.BaseFLAGS):
     optimizer = 'GroupRMSprop'
     initialization = 'gaussian'  # `orthogonal` or `identity` or `gaussian`
     lr = 0.01
+    angle_lr = 0.01
     train_thres = 1.e-6
 
     hidden_sizes = []
@@ -320,6 +321,11 @@ def main(*, depth, hidden_sizes, n_iters, problem, train_thres, _seed, _log, _wr
                 _writer.add_scalar('Schatten_norm', schatten_norm, global_step=T)
                 _writer.add_scalar('norm/grads', avg_grads_norm, global_step=T)
                 _writer.add_scalar('norm/params', avg_param_norm, global_step=T)
+
+                product = get_e2e(model).detach()
+                u, s, v = torch.svd(product)
+                #_log.info(f"torch.svd SIGMA = {s.topk(10)}")
+                _log.info(f"NONZERO SIGMA #  = {torch.count_nonzero(torch.round(s))}")
 
                 for i in range(FLAGS.n_singulars_save):
                     _writer.add_scalar(f'singular_values/{i}', singular_values[i], global_step=T)

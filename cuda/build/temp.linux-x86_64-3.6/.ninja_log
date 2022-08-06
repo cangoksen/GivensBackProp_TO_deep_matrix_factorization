@@ -1,0 +1,11 @@
+# ninja log v5
+1	39801	1658213357260668014	/home/cangoksen14/funStuff/Givens-Orthogonal-Backprop/rotMat/cuda/build/temp.linux-x86_64-3.6/rotMatCuda.o	120c1c546a025997
+1	58112	1658213375580649080	/home/cangoksen14/funStuff/Givens-Orthogonal-Backprop/rotMat/cuda/build/temp.linux-x86_64-3.6/rotMatCudaFun.o	57a2a6b1a825e9d5
+1	46067	1658213611756405300	/home/cangoksen14/funStuff/Givens-Orthogonal-Backprop/rotMat/cuda/build/temp.linux-x86_64-3.6/rotMatCudaFun.o	57a2a6b1a825e9d5
+1	47979	1658213827580185173	/home/cangoksen14/funStuff/Givens-Orthogonal-Backprop/rotMat/cuda/build/temp.linux-x86_64-3.6/rotMatCudaFun.o	57a2a6b1a825e9d5
+1	47836	1658214040099974942	/home/cangoksen14/funStuff/Givens-Orthogonal-Backprop/rotMat/cuda/build/temp.linux-x86_64-3.6/rotMatCudaFun.o	57a2a6b1a825e9d5
+2	33980	1658214865123176531	/home/cangoksen14/funStuff/Givens-Orthogonal-Backprop/rotMat/cuda/build/temp.linux-x86_64-3.6/rotMatCuda.o	120c1c546a025997
+1	33939	1658214916043126688	/home/cangoksen14/funStuff/Givens-Orthogonal-Backprop/rotMat/cuda/build/temp.linux-x86_64-3.6/rotMatCuda.o	120c1c546a025997
+1	32078	1658215139130909029	/home/cangoksen14/funStuff/Givens-Orthogonal-Backprop/rotMat/cuda/build/temp.linux-x86_64-3.6/rotMatCuda.o	120c1c546a025997
+1	32748	1658215248790803760	/home/cangoksen14/funStuff/Givens-Orthogonal-Backprop/rotMat/cuda/build/temp.linux-x86_64-3.6/rotMatCuda.o	120c1c546a025997
+1	41178	1658215300106754497	/home/cangoksen14/funStuff/Givens-Orthogonal-Backprop/rotMat/cuda/build/temp.linux-x86_64-3.6/rotMatCuda.o	120c1c546a025997
