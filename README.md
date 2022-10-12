@@ -1,3 +1,10 @@
+I took the code for implicit regulatization in Deep Matrix Factorization and repalced the linear layers with a single SVD parametrized layer - U S Vt.
+
+To increase the depth of the linear layers, I just added extra sigma layers. This achieved the same bias towards low rank solutions, since the added sigma layers attentuated small sigma values and exaggerated large sigma values during training (https://arxiv.org/pdf/1802.06509.pdf).
+
+This results in the simga values growing incrementally during training, where tHe orthogonal layers make use of them as they grow. 
+
+
 # Implicit Regularization in Deep Matrix Factorization
 
 Code for [
